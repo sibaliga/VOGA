@@ -3,6 +3,7 @@ function tab = assessProgress(path)
     a = dir(path);
     a = {a.name};
     %Make sure the needed folders are in the directory
+    %if needed folders are missing, run Set Data Path from VOGA menu
     if ~any(ismember(a,'Segmented Files'))
         error('No "Segmented Files" folder in this directory')
     elseif ~any(ismember(a,'Cycle Averages'))
